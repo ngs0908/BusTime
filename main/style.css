@@ -1,0 +1,34 @@
+#clock_frame {
+    color: #2f38c0;
+    background-color: rgb(255, 255, 255);
+    font-family: Courier, 'ＭＳ Ｐゴシック', monospace;
+    font-size: 25px;
+}
+
+#bus_area, #bus_area2, #bus_area3, #bus_area4 {
+    color: #2f38c0;
+    background-color: #ffffff;
+    font-family: Courier, 'ＭＳ Ｐゴシック', monospace;
+    font-size: 15px;
+    width: 150px;
+}
+
+#area {
+    display: flex;
+    margin-left: 10px;
+}
+
+#bus, #nbus, #nnbus {
+    color: rgb(255, 0, 43);
+    text-align: right;
+    display: block;
+    margin-right: 10px;
+}
+
+#timeLeft {
+    background-color: aquamarine;
+}
+
+#btn input {
+    margin-right: 5px;
+}
