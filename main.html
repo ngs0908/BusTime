@@ -8,7 +8,7 @@
 <body onLoad="startClock()">
     <div id="clock_frame">
         <br>
-        現在：<span id="clock_time"></span><br>
+        現在：<a id="clock_time"></a><br>
         <br>
     </div>
 
@@ -17,39 +17,47 @@
 
     <div id="area">
         <div id="bus_area">
-            <!-- <span id="bus_stop"></span> -->
+            赤56     (赤羽行き)
+            <br>
             <br>
             <div>今度のバス <a id="bus"></a> </div><br>
             （<span id="timeLeft"></span>後出発）<br><br>
             次<span id="nbus"></span><br>
             その次<span id="nnbus"></span><br>
+            <button onclick="openAka56Link()">時刻表を見る</button>
         </div>
 
         <div id="bus_area2">
-            <!-- <span id="bus_stop"></span> -->
-                <br>
-                今度のバス</td><td><span id="bus2"></span><br>
-                （<span id="timeLeft2"></span>後出発）<br>
-                次</td><td><span id="nbus2"></span><br>
-                その次</td><td><span id="nnbus2"></span><br>
+            増17     (成増行き)
+            <br>
+            <br>
+            今度のバス</td><td><span id="bus2"></span><br>
+            （<span id="timeLeft2"></span>後出発）<br><br>
+            次</td><td><span id="nbus2"></span><br>
+            その次</td><td><span id="nnbus2"></span><br>
+            <button onclick="openMasu17Link()">時刻表を見る</button>
         </div>
 
         <div id="bus_area3">
-            <!-- <span id="bus_stop"></span> -->
-                <br>
-                今度のバス</td><td><span id="bus3"></span><br>
-                （<span id="timeLeft3"></span>後出発）<br>
-                次</td><td><span id="nbus3"></span><br>
-                その次</td><td><span id="nnbus3"></span><br>
+            高01     (成増行き)
+            <br>
+            <br>
+            今度のバス</td><td><span id="bus3"></span><br>
+            （<span id="timeLeft3"></span>後出発）<br><br>
+            次</td><td><span id="nbus3"></span><br>
+            その次</td><td><span id="nnbus3"></span><br>
+            <button onclick="openTaka01Link()">時刻表を見る</button>
         </div>
 
         <div id="bus_area4">
-            <!-- <span id="bus_stop"></span> -->
-                <br>
-                今度のバス</td><td><span id="bus4"></span><br>
-                （<span id="timeLeft4"></span>後出発）<br>
-                次</td><td><span id="nbus4"></span><br>
-                その次</td><td><span id="nnbus4"></span><br>
+            東練01 (東武練馬行き)
+            <br>
+            <br>
+            今度のバス</td><td><span id="bus4"></span><br>
+            （<span id="timeLeft4"></span>後出発）<br><br>
+            次</td><td><span id="nbus4"></span><br>
+            その次</td><td><span id="nnbus4"></span><br>
+            <button onclick="openTouneri01Link()">時刻表を見る</button>
         </div>
     </div>
 

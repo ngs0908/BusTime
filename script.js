@@ -335,3 +335,35 @@ function startClock() {
     setInterval(clock3, 1000);
     setInterval(clock4, 1000);
 }
+
+function openAka56Link() {
+    // リンク先のURLを指定
+    var Aka56Link = "https://transfer.navitime.biz/5931bus/pc/diagram/BusDiagram?orvCode=00020280&course=0001001141&stopNo=1";
+    
+    // 新しいウィンドウまたはタブでリンクを開く
+    window.open(Aka56Link, "_blank");
+}
+
+function openMasu17Link() {
+    // リンク先のURLを指定
+    var Masu17Link = "https://transfer.navitime.biz/5931bus/pc/diagram/BusDiagram?orvCode=00020280&course=0001000706&stopNo=1";
+    
+    // 新しいウィンドウまたはタブでリンクを開く
+    window.open(Masu17Link, "_blank");
+}
+
+function openTaka01Link() {
+    // リンク先のURLを指定
+    var Taka01Link = "https://transfer.navitime.biz/5931bus/pc/diagram/BusDiagram?orvCode=00020280&course=0001000291&stopNo=1";
+    
+    // 新しいウィンドウまたはタブでリンクを開く
+    window.open(Taka01Link, "_blank");
+}
+
+function openTouneri01Link() {
+    // リンク先のURLを指定
+    var Touneri01 = "https://transfer.navitime.biz/5931bus/pc/diagram/BusDiagram?orvCode=00020278&course=0001000509&stopNo=10";
+    
+    // 新しいウィンドウまたはタブでリンクを開く
+    window.open(Touneri01, "_blank");
+}

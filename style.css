@@ -1,21 +1,27 @@
+body {
+  background-image: url("bus.png");
+}
+
 #clock_frame {
     color: #2f38c0;
-    background-color: rgb(255, 255, 255);
-    font-family: Courier, 'ＭＳ Ｐゴシック', monospace;
+    background-color: rgb(198, 237, 255);
+    font-family: "Gill Sans", sans-serif;
     font-size: 25px;
+    width: 200px;
+    margin-left: 10px;
 }
 
 #bus_area, #bus_area2, #bus_area3, #bus_area4 {
     color: #2f38c0;
-    background-color: #ffffff;
-    font-family: Courier, 'ＭＳ Ｐゴシック', monospace;
+    background-color: #f2ffe7;
+    font-family: "Gill Sans", sans-serif;
     font-size: 15px;
-    width: 150px;
+    width: 160px;
+    margin-left: 10px;
 }
 
 #area {
     display: flex;
-    margin-left: 10px;
 }
 
 #bus, #nbus, #nnbus, #bus2, #nbus2, #nnbus2, #bus3, #nbus3, #nnbus3, #bus4, #nbus4, #nnbus4 {
