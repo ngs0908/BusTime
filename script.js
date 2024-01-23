@@ -82,11 +82,17 @@ var tblData = [
 ];
 
 var busTables = [];
+var busTables2 = [];
+var busTables3 = [];
+var busTables4 = [];
 var tableNo = 0;
 
 // 関数の定義...
 
 var busTables = [];
+var busTables2 = [];
+var busTables3 = [];
+var busTables4 = [];
 
 function  hms(tim) {
     if (tim == '')  return ' ';
@@ -127,6 +133,82 @@ function tableSet() {
   }
 }
 
+function tableSet2() {
+  for (i = 1; i < tblData.length; i++){
+    var bTable2 = tblData[i];
+    for (j = 0; j < bTable2.length; j++){
+      if (bTable2[j].charAt(0) == "#") {
+        var tbleEl = [bTable2[j].substring(2)]; // バス停名を先頭要素にセット
+      } else {
+        var lineData = bTable2[j].split(":");
+        var hh = lineData[0];
+        if (isFinite(hh)) {   // ：の前が数値だったら
+          var minData = lineData[1].split(" ");
+          for (k = 0; k < minData.length; k++){
+            var mm = (minData[k]).replace(/\D/g,"");
+            var hhmm = hh * 100 + parseInt(mm, 10);
+            if (isFinite(hhmm)) {
+              tbleEl.push(hhmm);
+            }
+          }
+        }
+      }
+    }
+    busTables2.push(tbleEl);
+  }
+}
+
+function tableSet3() {
+  for (i = 2; i < tblData.length; i++){
+    var bTable3 = tblData[i];
+    for (j = 0; j < bTable3.length; j++){
+      if (bTable3[j].charAt(0) == "#") {
+        var tbleEl = [bTable3[j].substring(2)]; // バス停名を先頭要素にセット
+      } else {
+        var lineData = bTable3[j].split(":");
+        var hh = lineData[0];
+        if (isFinite(hh)) {   // ：の前が数値だったら
+          var minData = lineData[1].split(" ");
+          for (k = 0; k < minData.length; k++){
+            var mm = (minData[k]).replace(/\D/g,"");
+            var hhmm = hh * 100 + parseInt(mm, 10);
+            if (isFinite(hhmm)) {
+              tbleEl.push(hhmm);
+            }
+          }
+        }
+      }
+    }
+    busTables3.push(tbleEl);
+  }
+}
+
+function tableSet4() {
+  for (i = 3; i < tblData.length; i++){
+    var bTable4 = tblData[i];
+    for (j = 0; j < bTable4.length; j++){
+      if (bTable4[j].charAt(0) == "#") {
+        var tbleEl = [bTable4[j].substring(2)]; // バス停名を先頭要素にセット
+      } else {
+        var lineData = bTable4[j].split(":");
+        var hh = lineData[0];
+        if (isFinite(hh)) {   // ：の前が数値だったら
+          var minData = lineData[1].split(" ");
+          for (k = 0; k < minData.length; k++){
+            var mm = (minData[k]).replace(/\D/g,"");
+            var hhmm = hh * 100 + parseInt(mm, 10);
+            if (isFinite(hhmm)) {
+              tbleEl.push(hhmm);
+            }
+          }
+        }
+      }
+    }
+    busTables4.push(tbleEl);
+  }
+}
+
+
 function clock() {
     // document.getElementById("bus_stop").innerHTML = busTables[tableNo][0];
     var now = new Date();
@@ -154,18 +236,102 @@ function clock() {
     document.getElementById("nnbus").innerHTML = hm(nnbTime);
 };
 
+function clock2() {
+    // document.getElementById("bus_stop").innerHTML = busTables2[tableNo][0];
+    var now = new Date();
+    var nowTime = (now.getHours() * 60 * 60) + (now.getMinutes() * 60) + now.getSeconds();
+//  var tbl = busTables2[tableNo];
+    var bTime, nbTime, nnbTime;
+    bTime = nbTime = nnbTime = '';
+    for (var i = 1; i < busTables2[tableNo].length; i++) {
+        var bt = busTables2[tableNo][i];
+        if (bt > (now.getHours() * 100 + now.getMinutes())) {
+            bTime = hm2Time(bt);
+            if ((i + 1) < busTables2[tableNo].length) {
+                nbTime = hm2Time(busTables2[tableNo][i + 1]);
+                if ((i + 2) < busTables2[tableNo].length) {
+                    nnbTime = hm2Time(busTables2[tableNo][i + 2]);
+                };
+            };
+            break;
+        }
+    };
+    document.getElementById("bus2").innerHTML = hm(bTime);
+    document.getElementById("timeLeft2").innerHTML = hms(bTime -nowTime);
+    document.getElementById("nbus2").innerHTML = hm(nbTime);
+    document.getElementById("nnbus2").innerHTML = hm(nnbTime);
+};
+
+function clock3() {
+    // document.getElementById("bus_stop").innerHTML = busTables2[tableNo][0];
+    var now = new Date();
+    var nowTime = (now.getHours() * 60 * 60) + (now.getMinutes() * 60) + now.getSeconds();
+//  var tbl = busTables2[tableNo];
+    var bTime, nbTime, nnbTime;
+    bTime = nbTime = nnbTime = '';
+    for (var i = 1; i < busTables3[tableNo].length; i++) {
+        var bt = busTables3[tableNo][i];
+        if (bt > (now.getHours() * 100 + now.getMinutes())) {
+            bTime = hm2Time(bt);
+            if ((i + 1) < busTables3[tableNo].length) {
+                nbTime = hm2Time(busTables3[tableNo][i + 1]);
+                if ((i + 2) < busTables3[tableNo].length) {
+                    nnbTime = hm2Time(busTables3[tableNo][i + 2]);
+                };
+            };
+            break;
+        }
+    };
+    document.getElementById("bus3").innerHTML = hm(bTime);
+    document.getElementById("timeLeft3").innerHTML = hms(bTime -nowTime);
+    document.getElementById("nbus3").innerHTML = hm(nbTime);
+    document.getElementById("nnbus3").innerHTML = hm(nnbTime);
+};
+
+function clock4() {
+    // document.getElementById("bus_stop").innerHTML = busTables2[tableNo][0];
+    var now = new Date();
+    var nowTime = (now.getHours() * 60 * 60) + (now.getMinutes() * 60) + now.getSeconds();
+//  var tbl = busTables2[tableNo];
+    var bTime, nbTime, nnbTime;
+    bTime = nbTime = nnbTime = '';
+    for (var i = 1; i < busTables4[tableNo].length; i++) {
+        var bt = busTables4[tableNo][i];
+        if (bt > (now.getHours() * 100 + now.getMinutes())) {
+            bTime = hm2Time(bt);
+            if ((i + 1) < busTables4[tableNo].length) {
+                nbTime = hm2Time(busTables4[tableNo][i + 1]);
+                if ((i + 2) < busTables4[tableNo].length) {
+                    nnbTime = hm2Time(busTables4[tableNo][i + 2]);
+                };
+            };
+            break;
+        }
+    };
+    document.getElementById("bus4").innerHTML = hm(bTime);
+    document.getElementById("timeLeft4").innerHTML = hms(bTime -nowTime);
+    document.getElementById("nbus4").innerHTML = hm(nbTime);
+    document.getElementById("nnbus4").innerHTML = hm(nnbTime);
+};
+
 function startClock() {
     tableSet();
-    // 時刻表を切り替えるボタンをHTMLに追加する
-    var div_button = document.createElement("div");
-    var btn_element = "";
-    for (i = 0; i < busTables.length; i++) {
-        btn_element = btn_element + ' <input type="button" value="' + busTables[i][0] + '" onclick="';
-        btn_element = btn_element + 'tableNo = ' + i + ';"/>';
-        div_button.innerHTML = btn_element;
-    };
-    document.getElementById("btn").appendChild(div_button);
+    tableSet2();
+    tableSet3();
+    tableSet4();
+    // // 時刻表を切り替えるボタンをHTMLに追加する
+    // var div_button = document.createElement("div");
+    // var btn_element = "";
+    // for (i = 0; i < busTables.length; i++) {
+    //     btn_element = btn_element + ' <input type="button" value="' + busTables[i][0] + '" onclick="';
+    //     btn_element = btn_element + 'tableNo = ' + i + ';"/>';
+    //     div_button.innerHTML = btn_element;
+    // };
+    // document.getElementById("btn").appendChild(div_button);
 
     // 上記のclock関数を1000ミリ秒ごと(毎秒)に実行する
     setInterval(clock, 1000);
+    setInterval(clock2, 1000);
+    setInterval(clock3, 1000);
+    setInterval(clock4, 1000);
 }

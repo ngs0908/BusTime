@@ -18,14 +18,14 @@
     margin-left: 10px;
 }
 
-#bus, #nbus, #nnbus {
+#bus, #nbus, #nnbus, #bus2, #nbus2, #nnbus2, #bus3, #nbus3, #nnbus3, #bus4, #nbus4, #nnbus4 {
     color: rgb(255, 0, 43);
     text-align: right;
     display: block;
     margin-right: 10px;
 }
 
-#timeLeft {
+#timeLeft, #timeLeft2, #timeLeft3, #timeLeft4 {
     background-color: aquamarine;
 }
 
