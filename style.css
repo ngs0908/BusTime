@@ -2,24 +2,40 @@ body {
   background-image: url("bus.png");
 }
 
+p {
+  font-weight: bold;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  border: 2px solid;
+  color: #1100fd;
+  background-color: #ffcf776b;
+}
+
 #clock_frame {
     color: #2f38c0;
     background-color: rgb(198, 237, 255);
     font-family: "Gill Sans", sans-serif;
     font-size: 25px;
-    width: 200px;
+    width: 240px;
+    height: 65px;
     margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px
 }
 
 #bus_area, #bus_area2, #bus_area3, #bus_area4 {
     color: #2f38c0;
-    background-color: #f2ffe7;
+    background-color: #fdfddb;
     font-family: "Gill Sans", sans-serif;
     font-size: 15px;
-    width: 160px;
+    width: 180px;
     margin-left: 10px;
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
+    border-radius: 10px
 }
 
 #area {
