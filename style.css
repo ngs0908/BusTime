@@ -17,13 +17,14 @@ p {
     background-color: rgb(198, 237, 255);
     font-family: "Gill Sans", sans-serif;
     font-size: 25px;
-    width: 240px;
+    width: 280px;
     height: 65px;
     margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px
+    border-radius: 10px;
+    border: 2px solid;
 }
 
 #bus_area, #bus_area2, #bus_area3, #bus_area4 {
@@ -33,9 +34,10 @@ p {
     font-size: 15px;
     width: 180px;
     margin-left: 10px;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 3px 10px 3px;
     padding: 10px 10px 10px 10px;
-    border-radius: 10px
+    border-radius: 10px;
+    border: 2px solid;
 }
 
 #area {
@@ -49,8 +51,16 @@ p {
     margin-right: 10px;
 }
 
-#timeLeft, #timeLeft2, #timeLeft3, #timeLeft4 {
+[id*="timeLeft"] {
     background-color: aquamarine;
+}
+
+[id*="ntimeLeft"] {
+    background-color: rgb(178, 253, 228);
+}
+
+[id*="nntimeLeft"] {
+    background-color: rgb(227, 255, 246);
 }
 
 #btn input {
@@ -58,6 +68,6 @@ p {
 }
 
 .jikoku {
-    margin-left: 33px;
-
+  display: block;
+  margin: 0 auto;
 }
